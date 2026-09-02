@@ -1,0 +1,70 @@
+<svg width="520" height="620" viewBox="0 0 520 620" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="38%" r="60%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    <linearGradient id="shirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1D2536" />
+      <stop offset="100%" stop-color="#141B2A" />
+    </linearGradient>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C68A5E" />
+      <stop offset="100%" stop-color="#B67849" />
+    </linearGradient>
+  </defs>
+
+  <rect width="520" height="620" fill="none" />
+  <circle cx="260" cy="260" r="230" fill="url(#glow)" />
+  <circle cx="260" cy="260" r="196" fill="none" stroke="url(#ring)" stroke-width="2" stroke-opacity="0.5" />
+  <circle cx="260" cy="260" r="196" fill="#121826" />
+
+  <!-- shoulders / smart casual shirt -->
+  <path d="M110 560 C110 460 175 420 260 420 C345 420 410 460 410 560 L410 620 L110 620 Z" fill="url(#shirt)" />
+  <path d="M225 430 L260 470 L295 430 L275 415 L260 428 L245 415 Z" fill="#3B82F6" opacity="0.9" />
+
+  <!-- neck -->
+  <rect x="232" y="360" width="56" height="60" rx="18" fill="url(#skin)" />
+
+  <!-- head -->
+  <ellipse cx="260" cy="292" rx="98" ry="108" fill="url(#skin)" />
+
+  <!-- ears -->
+  <ellipse cx="162" cy="298" rx="12" ry="18" fill="#B67849" />
+  <ellipse cx="358" cy="298" rx="12" ry="18" fill="#B67849" />
+
+  <!-- clean modern hairstyle -->
+  <path d="M162 268 C158 200 205 158 260 158 C317 158 362 202 358 270 C352 250 336 236 328 244 C322 214 292 190 260 190 C228 190 198 214 192 244 C184 236 168 250 162 268 Z" fill="#161311" />
+  <path d="M170 226 C190 196 226 178 260 178 C296 178 330 196 350 228 C340 200 306 168 260 168 C216 168 182 200 170 226 Z" fill="#1C1815" />
+
+  <!-- eyebrows -->
+  <rect x="215" y="272" width="34" height="8" rx="4" fill="#241F1B" />
+  <rect x="271" y="272" width="34" height="8" rx="4" fill="#241F1B" />
+
+  <!-- eyes -->
+  <ellipse cx="232" cy="292" rx="9" ry="7" fill="#1B1F2A" />
+  <ellipse cx="288" cy="292" rx="9" ry="7" fill="#1B1F2A" />
+  <circle cx="234" cy="290" r="2" fill="#F8FAFC" opacity="0.8" />
+  <circle cx="290" cy="290" r="2" fill="#F8FAFC" opacity="0.8" />
+
+  <!-- nose -->
+  <path d="M258 296 C256 310 252 320 250 326 C255 332 265 332 270 326" fill="none" stroke="#9C6A44" stroke-width="4" stroke-linecap="round" />
+
+  <!-- light beard / jaw shading -->
+  <path d="M178 300 C176 350 200 388 260 392 C320 388 344 350 342 300 C336 340 306 366 260 368 C214 366 184 340 178 300 Z" fill="#241F1B" opacity="0.18" />
+
+  <!-- mouth -->
+  <path d="M232 346 C246 356 274 356 288 346" fill="none" stroke="#7A4B30" stroke-width="5" stroke-linecap="round" />
+
+  <!-- collar -->
+  <path d="M225 420 L260 452 L232 430 Z" fill="#0F1522" />
+  <path d="M295 420 L260 452 L288 430 Z" fill="#0F1522" />
+
+  <!-- accent badge -->
+  <circle cx="398" cy="430" r="30" fill="#0B0F19" stroke="url(#ring)" stroke-width="3" />
+  <path d="M388 430 L396 438 L410 420" fill="none" stroke="#3B82F6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
