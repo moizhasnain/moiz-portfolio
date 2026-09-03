@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { certifications, clientHighlights } from "@/lib/data";
 import { BadgeCheck } from "lucide-react";
 
@@ -13,9 +14,27 @@ export default function CredentialsAndHighlights() {
             {certifications.map((c) => (
               <li key={c.name} className="flex items-start gap-3">
                 <BadgeCheck size={20} className="mt-0.5 shrink-0 text-accent" />
-                <div>
-                  <p className="text-[15px] font-medium text-text">{c.name}</p>
-                  <p className="text-sm text-muted">{c.issuer}</p>
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-[15px] font-medium text-text">{c.name}</p>
+                    <p className="text-sm text-muted">{c.issuer}</p>
+                  </div>
+                  {c.image && (
+                    <a
+                      href={c.image}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0"
+                    >
+                      <Image
+                        src={c.image}
+                        alt={`Certificate for ${c.name}`}
+                        width={80}
+                        height={80}
+                        className="rounded border border-line object-cover"
+                      />
+                    </a>
+                  )}
                 </div>
               </li>
             ))}

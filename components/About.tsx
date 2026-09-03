@@ -15,8 +15,7 @@ export default function About() {
           <p>
             I'm Moiz Hasnain, an SEO Executive with over two years of hands-on
             experience turning search visibility into measurable business
-            growth. My work sits across Technical SEO, Local SEO, and Link
-            Building — the three levers that most reliably move organic
+            growth. My work sits across On-page SEO, Off-page SEO, and Technical SEO — the three levers that most reliably move organic
             traffic for the businesses I work with.
           </p>
           <p>

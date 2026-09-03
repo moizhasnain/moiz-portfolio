@@ -6,7 +6,8 @@ const stats = [
   { value: "2+", label: "Years experience" },
   { value: "5", label: "Industries served" },
   { value: "Technical SEO", label: "Core specialty" },
-  { value: "Link Building", label: "Core specialty" },
+  { value: "On-Page SEO", label: "Core specialty" },
+  { value: "Off-Page SEO", label: "Core specialty" },
 ];
 
 const container = {
@@ -45,9 +46,8 @@ export default function Hero() {
 
           <motion.p variants={item} className="mt-6 max-w-[52ch] text-[17px] leading-relaxed text-muted">
             Helping businesses improve search visibility, increase keyword
-            rankings, and generate sustainable organic growth through
-            Technical SEO, Local SEO, content optimization, and strategic
-            link building.
+            rankings, and generate sustainable organic growth through On-page SEO, Off-page SEO, 
+            and Technical SEO strategies, content optimization, and strategic link building.
           </motion.p>
 
           <motion.div variants={item} className="mt-9 flex flex-wrap gap-4">

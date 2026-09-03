@@ -1,3 +1,8 @@
+declare module "*.css" {
+  const classes: { readonly [key: string]: string };
+  export default classes;
+}
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -12,9 +17,9 @@ const SITE_URL = "https://moizhasnain.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Moiz Hasnain | SEO Executive — Technical SEO, Link Building & Local SEO",
+  title: "Moiz Hasnain | SEO Executive — On-page SEO, Off-page SEO & Technical SEO",
   description:
-    "Moiz Hasnain is an SEO Executive with 2+ years of experience driving organic growth through Technical SEO, Local SEO, content strategy and link building across the automotive, security, and beauty & wellness industries.",
+    "Moiz Hasnain is an SEO Executive with 2+ years of experience driving organic growth through On-page SEO, Off-page SEO, and Technical SEO strategies, content optimization, and strategic link building across the automotive, security, and beauty & wellness industries.",
   keywords: [
     "Moiz Hasnain",
     "SEO Executive",
@@ -32,7 +37,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: "Moiz Hasnain | SEO Executive — Data-Driven Organic Growth",
     description:
-      "SEO Executive specializing in Technical SEO, Local SEO, Link Building and Content Strategy. 2+ years, multiple industries, measurable organic growth.",
+      "SEO Executive specializing in On-page SEO, Off-page SEO, and Technical SEO strategies, content optimization, and strategic link building. 2+ years, multiple industries, measurable organic growth.",
     siteName: "Moiz Hasnain — SEO Executive",
     images: [
       {
@@ -48,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Moiz Hasnain | SEO Executive",
     description:
-      "Driving organic growth through Technical SEO, Local SEO and strategic link building.",
+      "Driving organic growth through On-page SEO, Off-page SEO, and Technical SEO strategies.",
     images: ["/og-image.png"],
   },
   alternates: {

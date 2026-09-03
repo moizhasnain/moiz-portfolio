@@ -357,8 +357,8 @@ export const experience = [
 ];
 
 export const certifications = [
-  { name: "Google Analytics Certification", issuer: "Google" },
-  { name: "SEMrush SEO Essentials Certification", issuer: "SEMrush" },
+  { name: "Google Analytics Certification", issuer: "Google", image: "/cert-google-analytics.jpg" },
+  { name: "SEMrush SEO Essentials Certification", issuer: "SEMrush", image: "/cert-semrush-seo.jpg" },
 ];
 
 export const industries = [
