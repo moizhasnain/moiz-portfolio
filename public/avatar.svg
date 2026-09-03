@@ -13,8 +13,8 @@
       <stop offset="100%" stop-color="#141B2A" />
     </linearGradient>
     <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#C68A5E" />
-      <stop offset="100%" stop-color="#B67849" />
+      <stop offset="0%" stop-color="#E8B994" />
+      <stop offset="100%" stop-color="#DBA57C" />
     </linearGradient>
   </defs>
 
@@ -34,12 +34,13 @@
   <ellipse cx="260" cy="292" rx="98" ry="108" fill="url(#skin)" />
 
   <!-- ears -->
-  <ellipse cx="162" cy="298" rx="12" ry="18" fill="#B67849" />
-  <ellipse cx="358" cy="298" rx="12" ry="18" fill="#B67849" />
+  <ellipse cx="162" cy="298" rx="12" ry="18" fill="#DBA57C" />
+  <ellipse cx="358" cy="298" rx="12" ry="18" fill="#DBA57C" />
 
-  <!-- clean modern hairstyle -->
-  <path d="M162 268 C158 200 205 158 260 158 C317 158 362 202 358 270 C352 250 336 236 328 244 C322 214 292 190 260 190 C228 190 198 214 192 244 C184 236 168 250 162 268 Z" fill="#161311" />
-  <path d="M170 226 C190 196 226 178 260 178 C296 178 330 196 350 228 C340 200 306 168 260 168 C216 168 182 200 170 226 Z" fill="#1C1815" />
+  <!-- thick, straight, black hairstyle -->
+  <path d="M176 232 C168 180 205 144 260 144 C315 144 352 180 344 232 C330 220 300 212 260 214 C220 212 190 220 176 232 Z" fill="#0A0A0A" />
+  <path d="M166 230 L182 234 L178 320 L164 320 Z" fill="#0A0A0A" />
+  <path d="M354 230 L338 234 L342 320 L356 320 Z" fill="#0A0A0A" />
 
   <!-- eyebrows -->
   <rect x="215" y="272" width="34" height="8" rx="4" fill="#241F1B" />
@@ -54,11 +55,15 @@
   <!-- nose -->
   <path d="M258 296 C256 310 252 320 250 326 C255 332 265 332 270 326" fill="none" stroke="#9C6A44" stroke-width="4" stroke-linecap="round" />
 
-  <!-- light beard / jaw shading -->
-  <path d="M178 300 C176 350 200 388 260 392 C320 388 344 350 342 300 C336 340 306 366 260 368 C214 366 184 340 178 300 Z" fill="#241F1B" opacity="0.18" />
+  <!-- full black beard -->
+  <path d="M172 300 C170 340 190 380 230 396 C246 402 274 402 290 396 C330 380 350 340 348 300 C342 336 322 362 296 374 C300 362 302 350 300 340 C290 356 276 364 260 364 C244 364 230 356 220 340 C218 350 220 362 224 374 C198 362 178 336 172 300 Z" fill="#0A0A0A" />
 
-  <!-- mouth -->
-  <path d="M232 346 C246 356 274 356 288 346" fill="none" stroke="#7A4B30" stroke-width="5" stroke-linecap="round" />
+  <!-- mustache -->
+  <path d="M222 328 C236 320 246 318 260 318 C274 318 284 320 298 328 C290 335 276 339 260 339 C244 339 230 335 222 328 Z" fill="#0A0A0A" />
+
+  <!-- lips, visible in the gap between mustache and beard -->
+  <path d="M236 348 C246 354 274 354 284 348 C276 358 244 358 236 348 Z" fill="#9C5F45" />
+  <path d="M238 347 C248 351 272 351 282 347" fill="none" stroke="#7A4530" stroke-width="2" stroke-linecap="round" />
 
   <!-- collar -->
   <path d="M225 420 L260 452 L232 430 Z" fill="#0F1522" />

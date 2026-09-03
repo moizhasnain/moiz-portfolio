@@ -1,21 +1,52 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
+import { Mail, Phone, Linkedin, MapPin, Loader2 } from "lucide-react";
 import { contact } from "@/lib/data";
+
+type Status = "idle" | "sending" | "success" | "error";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const subject = encodeURIComponent(`Project inquiry from ${form.name || "your website"}`);
-    const body = encodeURIComponent(
-      `${form.message}\n\n— ${form.name}\n${form.email}`
-    );
-    window.location.href = `mailto:${contact.email}?subject=${subject}&body=${body}`;
-    setSent(true);
+    setStatus("sending");
+
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey) {
+      // No key configured yet — fall back to opening the visitor's email client.
+      const subject = encodeURIComponent(`Project inquiry from ${form.name || "your website"}`);
+      const body = encodeURIComponent(`${form.message}\n\n— ${form.name}\n${form.email}`);
+      window.location.href = `mailto:${contact.email}?subject=${subject}&body=${body}`;
+      setStatus("idle");
+      return;
+    }
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `New inquiry from ${form.name} via portfolio site`,
+          from_name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("success");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -107,13 +138,20 @@ export default function Contact() {
           </div>
           <button
             type="submit"
-            className="rounded-md bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accentSoft"
+            disabled={status === "sending"}
+            className="flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accentSoft disabled:opacity-60"
           >
-            Send message
+            {status === "sending" && <Loader2 size={16} className="animate-spin" />}
+            {status === "sending" ? "Sending..." : "Send message"}
           </button>
-          {sent && (
+          {status === "success" && (
             <p className="text-sm text-emerald-400">
-              Opening your email client to send this message to {contact.email}.
+              Message sent — thanks for reaching out, I'll reply to {contact.email} soon.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-sm text-rose-400">
+              Something went wrong sending that. You can also email {contact.email} directly.
             </p>
           )}
         </form>

@@ -85,11 +85,17 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           className="relative mx-auto flex w-full max-w-sm items-center justify-center md:max-w-none"
         >
-          <img
-            src="/avatar.svg"
-            alt="Illustrated portrait of Moiz Hasnain"
-            className="w-full max-w-[380px]"
-          />
+          <div className="relative w-full max-w-[380px]">
+            <div className="absolute -inset-4 rounded-3xl bg-accent/20 blur-2xl" />
+            <div className="relative overflow-hidden rounded-2xl border border-line shadow-2xl shadow-black/40">
+              <img
+                src="/profile.jpg"
+                alt="Portrait of Moiz Hasnain, SEO Executive"
+                className="aspect-square w-full object-cover"
+              />
+              <div className="absolute inset-0 ring-1 ring-inset ring-white/5" />
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
