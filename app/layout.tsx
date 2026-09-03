@@ -1,9 +1,5 @@
-declare module "*.css" {
-  const classes: { readonly [key: string]: string };
-  export default classes;
-}
-
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -71,8 +67,8 @@ const personSchema = {
   name: "Moiz Hasnain",
   jobTitle: "SEO Executive",
   url: SITE_URL,
-  email: "mailto:moizhasnain47@gmail.com",
-  telephone: "+92-320-4060398",
+  email: "moizhasnain47@gmail.com",
+  telephone: "+923204060398",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Lahore",
@@ -102,7 +98,7 @@ const personSchema = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="en" className={inter.variable}>
