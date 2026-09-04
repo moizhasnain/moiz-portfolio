@@ -327,6 +327,7 @@ export const tools = [
   { name: "SEMrush", short: "SR" },
   { name: "Ahrefs", short: "AH" },
   { name: "Screaming Frog", short: "SF" },
+  { name: "Surfer SEO", short: "Surfer" },
 ];
 
 export const experience = [
