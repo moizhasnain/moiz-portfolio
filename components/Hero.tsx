@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 const stats = [
   { value: "2+", label: "Years experience" },
   { value: "5", label: "Industries served" },
+  { value: "GEO", label: "Core specialty" },
+  { value: "AEO", label: "Core specialty" },
   { value: "Technical SEO", label: "Core specialty" },
   { value: "On-Page SEO", label: "Core specialty" },
   { value: "Off-Page SEO", label: "Core specialty" },
-  { value: "GEO", label: "Core specialty" },
-  { value: "AEO", label: "Core specialty" },
   { value: "Meta Ads", label: "Core specialty" },
 ];
 
